@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(espacio.jpg);
+    height: 100vh;
+    background: #080808;
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    float: right;
+    padding: 10px;
+    margin: 10px;
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    right: 450px;
+    top: 600px;
+}
+
+.contenedor {
+    width: 920px;
+    height: 280px;
+    margin: 0 auto;
+    
+    position: relative;
+
+background-image: url(espacio.jpg);
+    transition: background-color 1s linear;
+    overflow: hidden;
+}
+
+
+.dino {
+    width: 110px;
+    height: 160px;
+
+    position: absolute;
+    bottom: 20px;
+    left: 42px;
+    z-index: 2;
+
+    background: url(dino.png) repeat-x 0px 0px;
+    background-size: 350px 150px;
+    background-position-x: 0px;
+
+}
+
+.dino-corriendo {
+    animation: animarDino 0.25s steps(2) infinite;
+}
+.dino-estrellado {
+    background-position-x: -252px;
+}
+
+.suelo {
+    width: 200%;
+    height: 42px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: url(sombra.png) repeat-x 0px 0px;
+    background-size: 50% 42px;
+
+}
+
+.cactus{
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(cactus1.png) no-repeat;
+}
+.cactus2{
+    width: 100px;
+    height: 100px;
+
+    background: url(cactus2.png) no-repeat;
+}
+
+.nube{
+    width: 92px;
+    height: 26px;
+
+    position: absolute;
+    z-index: 0;
+
+    background: url(cometa.png) no-repeat;
+    background-size: 92px 26px;
+}
+
+.score{
+    width: 100px;
+    height: 30px;
+
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 10;
+
+    color: #ffffff;
+    font-family: Verdana;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.game-over{
+    display: none;
+
+    position: absolute;
+    width: 100%;
+
+
+    text-align: center;
+    color: #fafafa;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: 700;
+}
+
+@keyframes animarDino{
+    from{
+        background-position-x: -84px;
+    }
+    to{
+        background-position-x: -252px;
+    }
+}
